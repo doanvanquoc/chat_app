@@ -1,6 +1,6 @@
 # Giới Thiệu
 
-Chat App - Có sử dụng 1 chút Bloc, tuy nhiên còn chưa thành thạo lắm :v
+Chat App => Dùng Firebase để đăng nhập, đăng ký và lưu trữ thông tin user cũng như messages - Có sử dụng 1 chút Bloc, tuy nhiên còn chưa thành thạo lắm :v
 
 ## Getting Started
 
