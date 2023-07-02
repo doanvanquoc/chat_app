@@ -1,6 +1,6 @@
-# chat_app
+# Giới Thiệu
 
-A new Flutter project.
+Chat App - Có sử dụng 1 chút Bloc, tuy nhiên còn chưa thành thạo lắm :v
 
 ## Getting Started
 
