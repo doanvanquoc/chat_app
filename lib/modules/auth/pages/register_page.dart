@@ -6,6 +6,7 @@ import 'package:chat_app/modules/auth/bloc/register/register_bloc.dart';
 import 'package:chat_app/modules/chat/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -32,8 +33,8 @@ class _RegisterPageState extends State<RegisterPage> {
               showDialog(
                 barrierDismissible: false,
                 context: context,
-                builder: ((context) => const Center(
-                      child: CircularProgressIndicator(),
+                builder: ((context) => Center(
+                      child: Lottie.asset('assets/loading.json'),
                     )),
               );
             }
@@ -57,7 +58,6 @@ class _RegisterPageState extends State<RegisterPage> {
             if (state is RegisterSuccess) {
               //Ẩn vòng loading
               Navigator.pop(context);
-              log('test');
 
               //Hiện thông báo thành công
               ScaffoldMessenger.of(context).showSnackBar(

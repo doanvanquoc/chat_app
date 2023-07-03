@@ -45,7 +45,7 @@ class _ChatPageState extends State<ChatPage> {
                     child: MyTextField(
                       controller: _messageController,
                       hintText: 'Send a message',
-                      textInputAction: TextInputAction.send,
+                      textInputAction: TextInputAction.done,
                     ),
                   ),
                   IconButton(
@@ -84,10 +84,6 @@ class _ChatPageState extends State<ChatPage> {
         crossAxisAlignment:
             isSender ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          Text(
-            isSender ? 'You' : data['senderEmail'],
-          ),
-          const SizedBox(height: 3),
           ChatBubble(
             color: isSender ? Colors.blueAccent : Colors.grey,
             alignment: alignment,

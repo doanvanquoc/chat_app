@@ -5,6 +5,7 @@ import 'package:chat_app/modules/auth/pages/register_page.dart';
 import 'package:chat_app/modules/chat/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,10 +28,12 @@ class _LoginPageState extends State<LoginPage> {
           listener: (context, state) {
             if (state is Logining) {
               showDialog(
-                  context: context,
-                  barrierDismissible: false,
-                  builder: (context) =>
-                      const Center(child: CircularProgressIndicator()));
+                context: context,
+                barrierDismissible: false,
+                builder: (context) => Center(
+                  child: Lottie.asset('assets/loading.json'),
+                ),
+              );
             }
             if (state is LoginError) {
               Navigator.pop(context);
@@ -42,11 +45,11 @@ class _LoginPageState extends State<LoginPage> {
               );
             }
             if (state is LoginSuccess) {
-              print('logged');
               Navigator.pop(context);
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text('Đăng nhập thành công'),
+                  duration: Duration(seconds: 1),
                 ),
               );
               //Chuyển sang màn đăng nhập
