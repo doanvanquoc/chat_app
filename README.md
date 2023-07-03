@@ -1,10 +1,6 @@
 # Giới Thiệu
 
-Chat App: 
--> Dùng Firebase để đăng nhập, đăng ký và lưu trữ thông tin user cũng như messages
--> Có sử dụng 1 chút Bloc, tuy nhiên còn chưa thành thạo lắm :v
--> Chưa validate form, do lười :v
--> Tham khảo Youtube
+Chat App: Dùng Firebase để tạo và lưu thông tin User cũng như Mesages. Có dùng bloc... tuy nhiên chưa thông thạo lắm :v
 
 ## Getting Started
 
